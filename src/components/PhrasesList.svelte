@@ -24,8 +24,8 @@
          portuguese_en: "Water dropping day by day wears the hardest rock away."
       },
       {
-         portuguese: 'Cada um por si e Deus por todos.', 
-         portuguese_en: "Every man for himself (and the devil take the hindmost)."
+         portuguese: 'Cada um por si e Deus por todos. Cada um por si e Deus por todos', 
+         portuguese_en: "Every man for himself (and the devil take the hindmost) (and the devil take the hindmost)."
       },
    ];
 

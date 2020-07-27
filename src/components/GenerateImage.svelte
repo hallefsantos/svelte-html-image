@@ -4,22 +4,24 @@
 
    export const generateCanvas = (phrase) => {   
       const ctx = canvasEl.getContext("2d");
-      const maxWidth = 400;
+      const maxWidth = 690;
       const primary = phrase.portuguese;
       const secondary = phrase.portuguese_en;
       const x = (canvasEl.width - maxWidth) / 2;
 
       ctx.drawImage(phraseBg, 0, 0);
-      ctx.font = "36px Helvetica";
+      ctx.font = "75px Helvetica";
       ctx.fillStyle = '#111';
 
-      wrapText(ctx, primary, x, 220, maxWidth, 45);
+      wrapText(ctx, primary, x, 380, maxWidth, 80);
       
-      ctx.font = "26px Helvetica";
+      ctx.font = "48px Helvetica";
       ctx.fillStyle = '#111';
 
-      wrapText(ctx, secondary, x, (270 +(36*getLines(ctx, primary, (maxWidth - 100)).length)), maxWidth, 35);
-      generateLink();
+      wrapText(ctx, secondary, x, (400 +(75*getLines(ctx, primary, 420).length)), maxWidth, 65);
+      // generateLink();
+
+      console.log(getLines(ctx, primary, 420));
    }
 
    const generateLink = () => {
@@ -75,5 +77,5 @@
    }
 </script>
 
-<canvas bind:this={canvasEl}  class="hidden" width="600" height="600"></canvas>
+<canvas bind:this={canvasEl} width="1080" height="1080"></canvas>
 <img bind:this={phraseBg} class="hidden" src="frase.jpg">
